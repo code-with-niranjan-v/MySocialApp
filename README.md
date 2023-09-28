@@ -17,7 +17,7 @@ Clone this repository to your local machine:
 
 bash
 Copy code
-git clone https://github.com/code-with-niranjan-v/MySocialApp/tree/main
+git clone https://github.com/code-with-niranjan-v/MySocialApp.git
 Open the project in Android Studio.
 
 ## Firebase Configuration
