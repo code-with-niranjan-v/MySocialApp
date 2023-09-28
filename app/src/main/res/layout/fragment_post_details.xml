@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.PostDetails">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Username"
+                android:textSize="18sp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:id="@+id/tvName"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/imgPostsRv"
+                tools:src="@mipmap/ic_launcher"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintWidth_percent="0.3"
+                app:layout_constraintTop_toBottomOf="@id/tvName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="4dp"/>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@+id/imgPostsRv"
+                tools:text="There once lived an old man and an old woman who were peasants and had to work hard to earn their daily bread. The old man used to go to fix fences and do other odd jobs for the farmers around, and while he was gone the old woman, his wife, did the work of the house and worked in their own little plot of land."
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textAlignment="center"
+                android:paddingTop="10dp"
+                android:paddingStart="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp"
+                android:id="@+id/tvDescription"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                android:padding="10dp"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDescription"
+                android:id="@+id/tvNumberLike"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:padding="10dp"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                android:id="@+id/imgLike"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toEndOf="@id/tvNumberLike"
+                android:src="@drawable/like"
+                app:layout_constraintTop_toBottomOf="@id/tvDescription"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                android:padding="10dp"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@id/imgLike"
+                app:layout_constraintTop_toBottomOf="@id/tvDescription"
+                android:id="@+id/tvNumberComments"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:padding="10dp"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toEndOf="@id/tvNumberComments"
+                android:src="@drawable/comment"
+                android:id="@+id/imgComment"
+                app:layout_constraintTop_toBottomOf="@id/tvDescription"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</FrameLayout>

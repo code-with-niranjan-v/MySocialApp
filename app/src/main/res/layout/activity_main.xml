@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        android:textSize="24sp"
+        android:layout_margin="10dp"
+        android:paddingStart="12dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:id="@+id/tvSignIn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/txtLayout"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/txtLayout"
+        app:startIconDrawable="@drawable/user"
+        app:hintEnabled="false"
+        app:hintTextColor="@color/black"
+        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        app:boxStrokeColor="@color/black"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:id="@+id/etEmail"
+            android:layout_margin="10dp"
+            android:paddingStart="12dp"
+            android:textSize="18sp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        app:layout_constraintTop_toBottomOf="@id/txtLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:startIconDrawable="@drawable/password"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        app:hintEnabled="false"
+        app:boxStrokeColor="@color/black"
+        android:id="@+id/txtPassLayout"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:id="@+id/etPassword"
+            android:layout_margin="10dp"
+            android:paddingStart="12dp"
+            android:textSize="18sp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="10dp"
+        android:paddingStart="12dp"
+        android:id="@+id/btnLogin"
+        android:text="Login"
+        android:backgroundTint="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/txtPassLayout"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have an Account?"
+        android:textSize="24sp"
+        android:layout_margin="10dp"
+        android:paddingStart="12dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:id="@+id/tvDontHave"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
